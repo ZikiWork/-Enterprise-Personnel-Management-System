@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="lunwen186" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="successAdd">/common/add_success.jsp</result>
+            <result name="successDel">/common/del_success.jsp</result>
+            <result name="successUpdate">/common/update_success.jsp</result>
+        </global-results>
+        
+        <action name="upload" class="com.util.upload" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+        </action>
+        
+        
+        <action name="adminAdd" class="adminAction" method="adminAdd">
+        </action>
+        <action name="adminDel" class="adminAction" method="adminDel">
+        </action>
+        <action name="adminManage" class="adminAction" method="adminManage">
+            <result name="success">/admin/admin/adminManage.jsp</result>
+        </action>
+        
+        
+        <action name="qiyexinxi" class="qiyexinxiAction" method="qiyexinxi">
+            <result>/admin/qiyexinxi/qiyexinxi.jsp</result>
+        </action>
+        <action name="qiyexinxiUp" class="qiyexinxiAction" method="qiyexinxiUp">
+        </action>
+        <action name="qiyexinxi_yuangong" class="qiyexinxiAction" method="qiyexinxi_yuangong">
+            <result>/ayuangong/qiyexinxi/qiyexinxi.jsp</result>
+        </action>
+        
+        
+        
+        <action name="orgMana" class="orgAction" method="orgMana">
+            <result name="success">/admin/org/orgMana.jsp</result>
+        </action>
+        
+        <action name="orgMana1" class="orgAction" method="orgMana1">
+            <result name="success">/admin/yuangong/yuangongSearch1.jsp</result>
+        </action>
+        <action name="addOrg" class="orgAction" method="addOrg">
+        </action>
+        <action name="delOrg" class="orgAction" method="delOrg">
+            <result name="haveChildOrganization">/admin/org/haveChildOrganization.jsp</result>
+        </action>
+        <action name="orgAll" class="orgAction" method="orgAll">
+            <result name="success">/admin/org/orgAll.jsp</result>
+        </action>
+        
+        
+        
+        
+        <action name="yuangongAdd" class="yuangongAction" method="yuangongAdd">
+        </action>
+        <action name="yuangongDel" class="yuangongAction" method="yuangongDel">
+        </action>
+        <action name="zhaopinbiangeng" class="yuangongAction" method="zhaopinbiangeng">
+        </action>
+        <action name="yuangongMana" class="yuangongAction" method="yuangongMana">
+            <result name="success">/admin/yuangong/yuangongMana.jsp</result>
+        </action>
+        <action name="yuangongEditPre" class="yuangongAction" method="yuangongEditPre">
+            <result name="success">/admin/yuangong/yuangongEditPre.jsp</result>
+        </action>
+        <action name="yuangongEdit" class="yuangongAction" method="yuangongEdit">
+        </action>
+         <action name="yuangongEdit1" class="yuangongAction" method="yuangongEdit1">
+        </action>       
+        <action name="yuangongSearch" class="yuangongAction" method="yuangongSearch">
+            <result name="success">/admin/yuangong/yuangongMana.jsp</result>
+        </action>
+        <action name="yuangongExcel" class="yuangongAction" method="yuangongExcel">
+             <result name="success"  type="stream">
+                  <param name="contentType">application/vnd.ms-excel</param>
+                  <param name="contentDisposition">attachment;filename="${filename}"</param>
+                  <param name="inputName">inputStream</param>  
+                  <param name="bufferSize">4094</param>
+             </result>
+        </action>
+        <action name="zhaopinAdd" class="yuangongAction" method="zhaopinAdd">
+        </action>
+        <action name="zhaopinMana" class="yuangongAction" method="zhaopinMana">
+            <result name="success">/admin/zhaopin/zhaopinMana.jsp</result>
+        </action>
+
+        <action name="zhaopinMana1" class="yuangongAction" method="zhaopinMana1">
+            <result name="success">/admin/zhaopin/zhaopinMana.jsp</result>
+        </action>        
+        
+        <action name="zhaopinDel" class="yuangongAction" method="zhaopinDel">
+        </action>
+                <action name="zhaopinPizhun" class="yuangongAction" method="zhaopinPizhun">
+        </action>
+        
+        <action name="zhaopinLuyong" class="yuangongAction" method="zhaopinLuyong">
+            <result name="success">/admin/zhaopin/zhaopinLuyong_re.jsp</result> 
+        </action>
+        
+        
+        <action name="gongziAdd" class="gongziAction" method="gongziAdd">
+        </action>
+        <action name="gongziMana" class="gongziAction" method="gongziMana">
+            <result>/admin/gongzi/gongziMana.jsp</result>
+        </action>
+        <action name="gongziSearch" class="gongziAction" method="gongziSearch">
+            <result>/admin/gongzi/gongziMana.jsp</result>
+        </action>
+        <action name="gongziDel" class="gongziAction" method="gongziDel">
+        </action>
+        <action name="gongziMy" class="gongziAction" method="gongziMy">
+            <result>/ayuangong/gongziMana.jsp</result>
+        </action>
+        
+        
+        
+        <action name="jiangchengAdd" class="jiangchengAction" method="jiangchengAdd">
+        </action>
+        <action name="jiangchengMana" class="jiangchengAction" method="jiangchengMana">
+            <result name="success">/admin/jiangcheng/jiangchengMana.jsp</result>
+        </action>
+                <action name="jiangchengManaMy" class="jiangchengAction" method="jiangchengManaMy">
+            <result name="success">/ayuangong/jiangchengMana.jsp</result>
+        </action>
+        
+        
+        <action name="jiangchengDel" class="jiangchengAction" method="jiangchengDel">
+        </action>
+        
+        <action name="peixunAdd" class="peixunAction" method="peixunAdd">
+        </action>
+        <action name="peixunMana" class="peixunAction" method="peixunMana">
+            <result name="success">/admin/peixun/peixunMana.jsp</result>
+        </action>
+         <action name="peixunMana1" class="peixunAction" method="peixunMana1">
+            <result name="success">/ayuangong/peixunMana.jsp</result>
+        </action>
+        <action name="peixunDel" class="peixunAction" method="peixunDel">
+        </action>
+        
+        
+        
+    </package>
+</struts>
